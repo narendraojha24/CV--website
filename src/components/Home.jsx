@@ -5,6 +5,7 @@ export default function Home() {
     <div className='min-h-screen flex-[3]'>
         homeb hxued hixce jhxste cyygd33h gc
         <h2>ndkcjoej</h2>
+        <h1>knef3</h1>
     </div>
   )
 }
