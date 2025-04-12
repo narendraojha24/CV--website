@@ -1,155 +1,45 @@
 import React from 'react'
+import { useState } from 'react'
 import { BiMoon } from 'react-icons/bi'
 import { BiSun } from 'react-icons/bi'
 import image from '/public/image.jpg'
 import { BiCurrentLocation, BiEnvelope, BiPhone } from 'react-icons/bi'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
+import { BiMenu, BiHome, BiUser, BiCodeAlt } from 'react-icons/bi';
 
 export default function Header({darkMode, toggleDarkMode}) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  }
   return (
     <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700">
- 
-<div class="menu">
-  <a href="#" class="link">
-    <span class="link-icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="192"
-        height="192"
-        fill="currentColor"
-        viewBox="0 0 256 256"
-      >
-        <rect width="256" height="256" fill="none"></rect>
-        <path
-          d="M213.3815,109.61945,133.376,36.88436a8,8,0,0,0-10.76339.00036l-79.9945,72.73477A8,8,0,0,0,40,115.53855V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V115.53887A8,8,0,0,0,213.3815,109.61945Z"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></path>
-      </svg>
-    </span>
-    <span class="link-title">Home</span>
-  </a>
-  <a href="#" class="link">
-    <span class="link-icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="192"
-        height="192"
-        fill="currentColor"
-        viewBox="0 0 256 256"
-      >
-        <rect width="256" height="256" fill="none"></rect>
-        <polyline
-          points="76.201 132.201 152.201 40.201 216 40 215.799 103.799 123.799 179.799"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></polyline>
-        <line
-          x1="100"
-          y1="156"
-          x2="160"
-          y2="96"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></line>
-        <path
-          d="M82.14214,197.45584,52.201,227.397a8,8,0,0,1-11.31371,0L28.603,215.11268a8,8,0,0,1,0-11.31371l29.94113-29.94112a8,8,0,0,0,0-11.31371L37.65685,141.65685a8,8,0,0,1,0-11.3137l12.6863-12.6863a8,8,0,0,1,11.3137,0l76.6863,76.6863a8,8,0,0,1,0,11.3137l-12.6863,12.6863a8,8,0,0,1-11.3137,0L93.45584,197.45584A8,8,0,0,0,82.14214,197.45584Z"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></path>
-      </svg>
-    </span>
-    <span class="link-title">Projects</span>
-  </a>
-  <a href="#" class="link">
-    <span class="link-icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="192"
-        height="192"
-        fill="currentColor"
-        viewBox="0 0 256 256"
-      >
-        <rect width="256" height="256" fill="none"></rect>
-        <path
-          d="M45.42853,176.99811A95.95978,95.95978,0,1,1,79.00228,210.5717l.00023-.001L45.84594,220.044a8,8,0,0,1-9.89-9.89l9.47331-33.15657Z"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></path>
-        <line
-          x1="96"
-          y1="112"
-          x2="160"
-          y2="112"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></line>
-        <line
-          x1="96"
-          y1="144"
-          x2="160"
-          y2="144"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></line>
-      </svg>
-    </span>
-    <span class="link-title">Contact</span>
-  </a>
 
-  <a href="#" class="link">
-    <span class="link-icon">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="192"
-        height="192"
-        fill="currentColor"
-        viewBox="0 0 256 256"
-      >
-        <rect width="256" height="256" fill="none"></rect>
-        <circle
-          cx="128"
-          cy="96"
-          r="64"
-          fill="none"
-          stroke="currentColor"
-          stroke-miterlimit="10"
-          stroke-width="16"
-        ></circle>
-        <path
-          d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="16"
-        ></path>
-      </svg>
-    </span>
-    <span class="link-title">Profile</span>
-  </a>
-</div>
+        {/* Mobile-only Open Icon and Menu */}
+      <div className="absolute left-5 top-10 z-20 flex flex-col items-center gap-2 sm:hidden">
+        <button onClick={toggleMenu}>
+          <BiMenu className="text-2xl" />
+        </button>
+
+        {menuOpen && (
+          <div className="flex flex-col items-center gap-4 mt-2 bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
+            <a href="#home" title="Home">
+              <BiHome className="text-xl hover:text-blue-500" />
+            </a>
+            <a href="#projects" title="Projects">
+              <BiCodeAlt className="text-xl hover:text-blue-500" />
+            </a>
+            <a href="#profile" title="Profile">
+              <BiUser className="text-xl hover:text-blue-500" />
+            </a>
+            <a href="#contact" title="Contact">
+              <BiPhone className="text-xl hover:text-blue-500" />
+            </a>
+          </div>
+        )}
+      </div>
+
 
 
     <div className="flex flex-col gap-5">

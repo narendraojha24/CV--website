@@ -1,7 +1,22 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import food from '/public/food.png'
+import furniExpert from '/public/furniExpert.png'
+import voice from '/public/voice.png'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [selectedTab, setSelectedTab] = useState("all");
+
+  const tabs = [
+    { label: "Mini Projects", value: "mini" },
+    { label: "Fullstack Projects", value: "fullstack" },
+    { label: "Landing Pages", value: "landing" }
+  ];
+
+  const handleTabChange = (tab) => setSelectedTab(tab);
   return (
     <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-black dark:text-white">
   <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">
@@ -61,84 +76,80 @@ export default function Home() {
   </div>
 </div>
 
+<div className="space-y-10 px-4 md:px-10">
+      <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
+      <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+        Here are some of the projects I’ve worked on — ranging from basic web components to complete full-stack applications. Each project was a learning journey, enhancing my understanding of React, design, and problem-solving.
+      </p>
 
-{/* Project Section */}
-<div className="space-y-10">
-  <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
-  
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {/* Project Card */}
-    <div className="group relative overflow-hidden rounded-xl shadow-md border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-      <img
-        src="https://via.placeholder.com/300x180"
-        alt="Project 1"
-        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="p-4 space-y-2">
-        <h2 className="text-lg font-semibold">Project Title 1</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          Short description about the project goes here. Highlight key features or tech used.
-        </p>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
-        >
-          View Project →
-        </a>
+      {/* Tab Navigation */}
+      <div className="flex flex-wrap gap-4 mt-6">
+        {tabs.map(tab => (
+          <button
+            key={tab.value}
+            onClick={() => handleTabChange(tab.value)}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all ${
+              selectedTab === tab.value
+                ? "bg-blue-600 text-white"
+                : "bg-transparent dark:text-white text-gray-700 border-gray-400 hover:bg-blue-100 dark:hover:bg-gray-700"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Project Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
+        {[food, furniExpert, voice].map((src, index) => (
+          <div
+            key={index}
+            className="group relative overflow-hidden rounded-xl shadow-md border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
+          >
+            <img
+              src={src}
+              alt={`Project ${index + 1}`}
+              className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
+            {/* Hover Icons */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-5">
+              <a
+                href="https://github.com/yourrepo" // Replace with actual
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-xl hover:text-blue-400"
+                title="Code Preview"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://liveproject.com" // Replace with actual
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-xl hover:text-green-400"
+                title="Live Project"
+              >
+                <FaExternalLinkAlt />
+              </a>
+            </div>
+
+            <div className="p-4 space-y-2">
+              <h2 className="text-lg font-semibold">Project Title {index + 1}</h2>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Short description about the project goes here. Highlight key features or tech used.
+              </p>
+              <a
+                href="#"
+                className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
+              >
+                View Project →
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-
-    {/* Project Card */}
-    <div className="group relative overflow-hidden rounded-xl shadow-md border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-      <img
-        src="https://via.placeholder.com/300x180"
-        alt="Project 2"
-        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="p-4 space-y-2">
-        <h2 className="text-lg font-semibold">Project Title 2</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          Short description about the project goes here. Highlight key features or tech used.
-        </p>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
-        >
-          View Project →
-        </a>
-      </div>
-    </div>
-
-    {/* Project Card */}
-    <div className="group relative overflow-hidden rounded-xl shadow-md border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-xl">
-      <img
-        src="https://via.placeholder.com/300x180"
-        alt="Project 3"
-        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      <div className="p-4 space-y-2">
-        <h2 className="text-lg font-semibold">Project Title 3</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          Short description about the project goes here. Highlight key features or tech used.
-        </p>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
-        >
-          View Project →
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 
 {/* Contact Section */}
