@@ -7,7 +7,26 @@ import { BiCurrentLocation, BiEnvelope, BiPhone } from 'react-icons/bi'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
 import { BiMenu, BiHome, BiUser, BiCodeAlt } from 'react-icons/bi';
 
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGithub,
+  FaFigma,
+  FaNodeJs,
+} from "react-icons/fa";
+import { SiCplusplus, SiTailwindcss, SiMongodb } from "react-icons/si";
+
 export default function Header({darkMode, toggleDarkMode}) {
+
+
+  const SkillBadge = ({ icon, label }) => (
+    <div className="flex items-center gap-2 rounded-xl bg-black text-white p-3 text-sm font-medium dark:bg-white dark:text-black shadow-md">
+      {icon}
+      {label}
+    </div>
+  );
   
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeIcon, setActiveIcon] = useState(null);
@@ -100,20 +119,16 @@ export default function Header({darkMode, toggleDarkMode}) {
           <h3 className="text-xl font-light">Web Developer</h3>
         </div>
 
-        <button
-  className={`
-    fixed right-4 top-4 z-50 
-    sm:absolute sm:right-10 sm:top-10 
-    bg-white dark:bg-gray-800 p-2 rounded-full shadow-md 
-  `}
-  onClick={toggleDarkMode}
->
-  {darkMode ? (
-    <BiSun className="text-2xl text-yellow-500" />
-  ) : (
-    <BiMoon className="text-2xl text-blue-500" />
-  )}
-</button>
+        <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
+          {
+            darkMode ? (
+              <BiSun className='text-2xl'/>
+            ) : (
+              <BiMoon className='text-2xl' />
+            )
+          }
+        
+        </button>
 
       </div>
 
@@ -159,14 +174,14 @@ export default function Header({darkMode, toggleDarkMode}) {
   <ul>
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
       <span className="font-semibold md:text-lg">Computer Science</span>
-      <span className="font-light">University of X</span>
-      <span className="text-sm text-gray-400">2016–2020</span>
+      <span className="font-light">Jaypee University Of Engineering And Technology</span>
+      <span className="text-sm text-gray-400">2022–2026</span>
     </li>
 
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
-      <span className="font-semibold md:text-lg">Computer Science</span>
-      <span className="font-light">University of X</span>
-      <span className="text-sm text-gray-400">2016–2020</span>
+      <span className="font-semibold md:text-lg">Senior Secondary</span>
+      <span className="font-light">Sri Sathya Sai Vidya Vihar , Gail</span>
+      <span className="text-sm text-gray-400">2020–2022</span>
     </li>
 
   </ul>
@@ -174,25 +189,24 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
-  <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
+      <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
 
-  <div className="flex flex-wrap gap-3">
-    <div className="flex flex-wrap gap-3">
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">HTML</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">CSS</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">JavaScript</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">React</span>
+      <div className="flex flex-wrap gap-3">
+        <SkillBadge icon={<FaHtml5 className="text-orange-500" />} label="HTML" />
+        <SkillBadge icon={<FaCss3Alt className="text-blue-500" />} label="CSS" />
+        <SkillBadge icon={<FaJs className="text-yellow-400" />} label="JavaScript" />
+        <SkillBadge icon={<FaReact className="text-cyan-400" />} label="React" />
+        <SkillBadge icon={<FaNodeJs className="text-green-600" />} label="Node.js" />
+        <SkillBadge icon={<SiMongodb className="text-green-500" />} label="MongoDB" />
+      </div>
+
+      <div className="flex flex-wrap gap-3">
+        <SkillBadge icon={<FaGithub className="text-white bg-black rounded-full" />} label="GitHub" />
+        <SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" />
+        <SkillBadge icon={<FaFigma className="text-pink-500" />} label="Figma" />
+        <SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" />
+      </div>
     </div>
-  </div>
-  <div className="flex flex-wrap gap-3">
-    <div className="flex flex-wrap gap-3">
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">HTML</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">CSS</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">JavaScript</span>
-      <span className="rounded-xl bg-black text-white p-3 text-center dark:bg-white dark:text-black">React</span>
-    </div>
-  </div>
-</div>
 
 
 

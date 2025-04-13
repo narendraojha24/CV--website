@@ -138,7 +138,7 @@ export default function Home() {
   </div>
 </div>
 
-<div className="space-y-10 md:px-10" id='projects'>
+<div className="space-y-10 md:px-0" id='projects'>
       <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
       <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
         A collection of projects that showcase my journey in web development — from beginner-level experiments to full-fledged applications. Use the categories below to explore.
@@ -152,7 +152,7 @@ export default function Home() {
             onClick={() => setSelectedTab(tab.value)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all ${
               selectedTab === tab.value
-                ? "bg-blue-600 text-white"
+                ? "bg-gray-600 text-white"
                 : "bg-transparent dark:text-white text-gray-700 border-gray-400 hover:bg-blue-100 dark:hover:bg-gray-700"
             }`}
           >
@@ -208,84 +208,101 @@ export default function Home() {
     </div>
 
 
-{/* Contact Section */}
-<div className="space-y-10" id="contact">
-  <h1 className="text-2xl font-bold md:text-4xl text-center">Get in Touch</h1>
+    <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id="contact">
+  <div className="mx-auto max-w-lg text-center">
+    <h1 className="text-2xl font-bold sm:text-3xl text-gray-900 dark:text-white">
+      Contact Me
+    </h1>
+    <p className="mt-4 text-gray-600 dark:text-gray-300">
+      Have any questions or want to work together? Just drop a message below.
+    </p>
+  </div>
 
-  <motion.form
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-    action="https://formsubmit.co/your-email@example.com"
+  <form
+    action="https://formspree.io/f/xlddyryg"
     method="POST"
-    className="space-y-6 max-w-2xl mx-auto bg-white dark:bg-zinc-900 p-8 rounded-xl shadow-xl"
+    className="mx-auto mt-8 max-w-md space-y-4"
   >
-    <motion.div
-      whileFocus={{ scale: 1.02 }}
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <label htmlFor="name" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
-        Name
-      </label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        required
-        placeholder="Your full name"
-        className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-      />
-    </motion.div>
+    {/* Name Field */}
+    <div>
+      <label className="sr-only" htmlFor="name">Name</label>
+      <div className="relative">
+        <input
+          placeholder="Your name"
+          className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
+          id="name"
+          name="name"
+          type="text"
+          required
+        />
+        <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+          <svg
+            className="h-6 w-6 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M5.121 17.804A12.001 12.001 0 0112 15c2.21 0 4.26.636 5.879 1.804M15 11a3 3 0 10-6 0 3 3 0 006 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </div>
+    </div>
 
-    <motion.div
-      whileFocus={{ scale: 1.02 }}
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <label htmlFor="email" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
-        Email
-      </label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        required
-        placeholder="you@example.com"
-        className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-      />
-    </motion.div>
+    {/* Email Field */}
+    <div>
+      <label className="sr-only" htmlFor="email">Email</label>
+      <div className="relative">
+        <input
+          placeholder="Your email"
+          className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
+          id="email"
+          name="email"
+          type="email"
+          required
+        />
+        <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
+          <svg
+            className="h-6 w-6 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0z M16 12v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206A8.959 8.959 0 0112 21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </div>
+    </div>
 
-    <motion.div
-      whileFocus={{ scale: 1.02 }}
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <label htmlFor="message" className="block mb-1 font-medium text-gray-700 dark:text-gray-300">
-        Message
-      </label>
+    {/* Message Field */}
+    <div>
+      <label className="sr-only" htmlFor="message">Message</label>
       <textarea
         id="message"
         name="message"
-        rows="5"
+        placeholder="Your message"
+        rows="4"
         required
-        placeholder="Type your message here..."
-        className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+        className="w-full rounded-lg border-gray-300 p-4 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
       ></textarea>
-    </motion.div>
+    </div>
 
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      type="submit"
-      className="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors duration-300"
-    >
-      Send Message
-    </motion.button>
-  </motion.form>
+    {/* Submit Button */}
+    <div className="flex items-center justify-between">
+      <p className="text-sm text-gray-600 dark:text-gray-400">
+        I'll get back to you shortly!
+      </p>
+      <button
+        className="inline-block rounded-lg bg-purple-600 px-5 py-3 text-sm font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+        type="submit"
+      >
+        Send Message
+      </button>
+    </div>
+  </form>
 </div>
+
 
 
 
