@@ -64,7 +64,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         {/* Toggle/Menu Button */}
         <button
           onClick={toggleMenu}
-          className="w-16 h-16 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
+          className="w-16 h-16 bg-white dark:bg-purple-700 rounded-full shadow-lg flex items-center justify-center"
         >
           {activeIcon === null ? (
             <BiMenu className="text-2xl" />
@@ -94,7 +94,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-md hover:text-blue-500 text-xl">
+                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 rounded-full shadow-md hover:text-purple-400 text-xl">
                   {item.icon}
                 </div>
               </a>
@@ -155,15 +155,15 @@ export default function Header({darkMode, toggleDarkMode}) {
   <ul className="space-y-3">
     <li className="flex items-center gap-2">
       <BiLogoGithub className="text-xl" />
-      <span>@githubuser</span>
+      <a href="https://github.com/narendraojha24"><span>narendraojha24</span></a>
     </li>
     <li className="flex items-center gap-2">
       <BiLogoTwitter className="text-xl" />
-      <span>@twitteruser</span>
+      <span>narendra24</span>
     </li>
     <li className="flex items-center gap-2">
       <BiLogoLinkedin className="text-xl" />
-      <span>@linkedinuser</span>
+      <a href="https://www.linkedin.com/in/narendraojha24/"><span>narendraojha24</span></a>
     </li>
   </ul>
 </div>
@@ -228,6 +228,8 @@ export default function Header({darkMode, toggleDarkMode}) {
   </div>
 </div>
 
+
+{/*
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
   <h1 className="text-base font-semibold md:text-2xl">LANGUAGES</h1>
 
@@ -236,7 +238,8 @@ export default function Header({darkMode, toggleDarkMode}) {
     <li>German</li>
     <li>Spanish</li>
   </ul>
-</div>
+</div>*/}
+
 
 
 
