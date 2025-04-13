@@ -8,18 +8,80 @@ import { useState } from 'react';
 
 export default function Home() {
 
-  const [selectedTab, setSelectedTab] = useState("all");
+  const [selectedTab, setSelectedTab] = useState("mini");
 
   const tabs = [
     { label: "Mini Projects", value: "mini" },
     { label: "Fullstack Projects", value: "fullstack" },
-    { label: "Landing Pages", value: "landing" }
+    { label: "Landing Pages", value: "landing" },
   ];
 
-  const handleTabChange = (tab) => setSelectedTab(tab);
+  const allProjects = {
+    mini: [
+      {
+        title: "Voice to Text App",
+        description: "A simple app that converts speech into text using the Web Speech API.",
+        image: "public/furniExpert.png", // Replace with actual
+        code: "https://github.com/your-mini1",
+        live: "https://your-mini1-live.vercel.app",
+      },
+      {
+        title: "Weather Widget",
+        description: "A compact weather display using OpenWeather API.",
+        image: "/images/weather.png",
+        code: "https://github.com/your-mini2",
+        live: "https://your-mini2-live.vercel.app",
+      },
+      {
+        title: "Weather Widget",
+        description: "A compact weather display using OpenWeather API.",
+        image: "/images/weather.png",
+        code: "https://github.com/your-mini2",
+        live: "https://your-mini2-live.vercel.app",
+      },
+      
+    ],
+    fullstack: [
+      {
+        title: "FurniExpert",
+        description: "A MERN stack AR-based shopping site for viewing and buying furniture in real-world space.",
+        image: "/images/furniExpert.png",
+        code: "https://github.com/your-fullstack1",
+        live: "https://furniexpert.vercel.app",
+      },
+      {
+        title: "Food Delivery App",
+        description: "Full-featured food delivery system with admin, cart, and payment modules.",
+        image: "/images/food.png",
+        code: "https://github.com/your-fullstack2",
+        live: "https://your-foodapp-live.vercel.app",
+      },
+    ],
+    landing: [
+      {
+        title: "Portfolio Website",
+        description: "Clean, responsive React-based personal portfolio to showcase projects and contact info.",
+        image: "/images/portfolio.png",
+        code: "https://github.com/your-landing1",
+        live: "https://your-portfolio.vercel.app",
+      },
+      {
+        title: "Startup Landing Page",
+        description: "Modern landing page built using TailwindCSS and React for a fictional startup.",
+        image: "/images/startup.png",
+        code: "https://github.com/your-landing2",
+        live: "https://startup-page.vercel.app",
+      },
+    ],
+  };
+
+  const selectedProjects = allProjects[selectedTab];
+
+  
+
   return (
-    <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-black dark:text-white">
-  <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">
+    <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-black dark:text-white" id='profile'>
+  <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14" >
     <div className="space-y-5">
       <h1 className="text-2xl font-bold md:text-4xl">About</h1>
       <p className="text-sm text-gray-600 dark:text-gray-400 md:text-base">
@@ -76,18 +138,18 @@ export default function Home() {
   </div>
 </div>
 
-<div className="space-y-10 px-4 md:px-10">
+<div className="space-y-10 md:px-10" id='projects'>
       <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
       <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-        Here are some of the projects I’ve worked on — ranging from basic web components to complete full-stack applications. Each project was a learning journey, enhancing my understanding of React, design, and problem-solving.
+        A collection of projects that showcase my journey in web development — from beginner-level experiments to full-fledged applications. Use the categories below to explore.
       </p>
 
-      {/* Tab Navigation */}
+      {/* Tabs */}
       <div className="flex flex-wrap gap-4 mt-6">
-        {tabs.map(tab => (
+        {tabs.map((tab) => (
           <button
             key={tab.value}
-            onClick={() => handleTabChange(tab.value)}
+            onClick={() => setSelectedTab(tab.value)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all ${
               selectedTab === tab.value
                 ? "bg-blue-600 text-white"
@@ -99,23 +161,23 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Project Cards Grid */}
+      {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
-        {[food, furniExpert, voice].map((src, index) => (
+        {selectedProjects.map((project, index) => (
           <div
             key={index}
             className="group relative overflow-hidden rounded-xl shadow-md border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
           >
             <img
-              src={src}
-              alt={`Project ${index + 1}`}
+              src={project.image}
+              alt={project.title}
               className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
             />
 
             {/* Hover Icons */}
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-5">
               <a
-                href="https://github.com/yourrepo" // Replace with actual
+                href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-xl hover:text-blue-400"
@@ -124,7 +186,7 @@ export default function Home() {
                 <FaGithub />
               </a>
               <a
-                href="https://liveproject.com" // Replace with actual
+                href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white text-xl hover:text-green-400"
@@ -135,16 +197,10 @@ export default function Home() {
             </div>
 
             <div className="p-4 space-y-2">
-              <h2 className="text-lg font-semibold">Project Title {index + 1}</h2>
+              <h2 className="text-lg font-semibold">{project.title}</h2>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Short description about the project goes here. Highlight key features or tech used.
+                {project.description}
               </p>
-              <a
-                href="#"
-                className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
-              >
-                View Project →
-              </a>
             </div>
           </div>
         ))}

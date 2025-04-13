@@ -8,37 +8,83 @@ import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
 import { BiMenu, BiHome, BiUser, BiCodeAlt } from 'react-icons/bi';
 
 export default function Header({darkMode, toggleDarkMode}) {
+  
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeIcon, setActiveIcon] = useState(null);
+
+  const icons = [
+    { href: "#home", icon: <BiHome />, title: "Home", angle: 90 },
+    { href: "#projects", icon: <BiCodeAlt />, title: "Projects", angle: 60 },
+    { href: "#profile", icon: <BiUser />, title: "Profile", angle: 30 },
+    { href: "#contact", icon: <BiPhone />, title: "Contact", angle: 0 },
+  ];
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  }
-  return (
-    <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700">
+    if (activeIcon !== null) {
+      setActiveIcon(null);
+    } else {
+      setMenuOpen(!menuOpen);
+    }
+  };
 
-        {/* Mobile-only Open Icon and Menu */}
-      <div className="absolute left-5 top-10 z-20 flex flex-col items-center gap-2 sm:hidden">
-        <button onClick={toggleMenu}>
-          <BiMenu className="text-2xl" />
+  const handleIconClick = (index) => {
+    if (activeIcon === index) {
+      setActiveIcon(null); // Reopen the semi-circle
+    } else {
+      setActiveIcon(index); // Show only selected icon
+      setMenuOpen(false);
+    }
+  };
+
+
+  return (
+    <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700" id='home'>
+
+<div className="fixed top-6 left-4 z-50 sm:hidden" >
+      <div className="relative w-16 h-16">
+        {/* Toggle/Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="w-16 h-16 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
+        >
+          {activeIcon === null ? (
+            <BiMenu className="text-2xl" />
+          ) : (
+            icons[activeIcon].icon
+          )}
         </button>
 
-        {menuOpen && (
-          <div className="flex flex-col items-center gap-4 mt-2 bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
-            <a href="#home" title="Home">
-              <BiHome className="text-xl hover:text-blue-500" />
-            </a>
-            <a href="#projects" title="Projects">
-              <BiCodeAlt className="text-xl hover:text-blue-500" />
-            </a>
-            <a href="#profile" title="Profile">
-              <BiUser className="text-xl hover:text-blue-500" />
-            </a>
-            <a href="#contact" title="Contact">
-              <BiPhone className="text-xl hover:text-blue-500" />
-            </a>
-          </div>
-        )}
+        {/* Curved Icons */}
+        {(menuOpen || activeIcon !== null) &&
+          icons.map((item, index) => {
+            if (activeIcon !== null && activeIcon !== index) return null;
+
+            const angle = item.angle;
+            const radius = activeIcon !== null ? 0 : 80; // Collapse if one icon is active
+            const x = radius * Math.cos((angle * Math.PI) / 180);
+            const y = radius * Math.sin((angle * Math.PI) / 180);
+
+            return (
+              <a
+                key={index}
+                href={item.href}
+                title={item.title}
+                onClick={() => handleIconClick(index)}
+                className="absolute left-1/2 top-1/2 transition-all duration-500 ease-out"
+                style={{
+                  transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                }}
+              >
+                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-md hover:text-blue-500 text-xl">
+                  {item.icon}
+                </div>
+              </a>
+            );
+          })}
       </div>
+    </div>
+          
+
 
 
 
@@ -49,36 +95,41 @@ export default function Header({darkMode, toggleDarkMode}) {
 
         <div className="text-center space-y-1">
           <h1 className="text-4xl font-light">
-            Chris <span className="font-semibold">Josh</span>
+            Narendra <span className="font-semibold">Ojha</span>
           </h1>
           <h3 className="text-xl font-light">Web Developer</h3>
         </div>
 
-        <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
-          {
-            darkMode ? (
-              <BiSun className='text-2xl'/>
-            ) : (
-              <BiMoon className='text-2xl' />
-            )
-          }
-        
-        </button>
+        <button
+  className={`
+    fixed right-4 top-4 z-50 
+    sm:absolute sm:right-10 sm:top-10 
+    bg-white dark:bg-gray-800 p-2 rounded-full shadow-md 
+  `}
+  onClick={toggleDarkMode}
+>
+  {darkMode ? (
+    <BiSun className="text-2xl text-yellow-500" />
+  ) : (
+    <BiMoon className="text-2xl text-blue-500" />
+  )}
+</button>
+
       </div>
 
       <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
   <ul className="space-y-3">
     <li className="flex items-center gap-2">
       <BiCurrentLocation className="text-xl" />
-      <span>Williams St. 256 Los Angeles</span>
+      <span>Guna , (MP)</span>
     </li>
     <li className="flex items-center gap-2">
       <BiEnvelope className="text-xl" />
-      <span>user@gmail.com</span>
+      <span>narendraojha997@gmail.com</span>
     </li>
     <li className="flex items-center gap-2">
       <BiPhone className="text-xl" />
-      <span>123-456-789</span>
+      <span>+91 7987627973</span>
     </li>
   </ul>
 </div>
@@ -121,6 +172,7 @@ export default function Header({darkMode, toggleDarkMode}) {
   </ul>
 </div>
 
+
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
   <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
 
@@ -141,6 +193,8 @@ export default function Header({darkMode, toggleDarkMode}) {
     </div>
   </div>
 </div>
+
+
 
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
   <h1 className="text-base font-semibold md:text-2xl">HOBBIES</h1>
