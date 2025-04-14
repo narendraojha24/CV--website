@@ -5,7 +5,7 @@ import furniExpert from '/public/furniExpert.png'
 import voice from '/public/voice.png'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useState } from 'react';
-import MobileFadeInSection from './MobileFadeInSection'
+
 
 export default function Home() {
 
@@ -84,7 +84,7 @@ export default function Home() {
     <div className="min-h-screen flex-[3] transition-all duration-500 dark:bg-black dark:text-white" id='profile'>
   <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14" >
 
-   < MobileFadeInSection>
+   
     <div className="space-y-5">
       <h1 className="text-2xl font-bold md:text-4xl">About</h1>
       <p className="text-sm text-gray-600 dark:text-gray-400 md:text-base">
@@ -102,11 +102,8 @@ export default function Home() {
         consectetur!
       </p>
     </div>
-    </MobileFadeInSection>
+    
 
-
-
-    < MobileFadeInSection>
 
     <div className="space-y-10">
   <h1 className='text-2xl font-bold md:text-4xl'>Experience</h1>
@@ -146,10 +143,9 @@ export default function Home() {
   </div>
 </div>
 
-</MobileFadeInSection>
 
 
-<MobileFadeInSection>
+
 <div className="space-y-10 md:px-0" id='projects'>
       <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
       <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
@@ -219,10 +215,8 @@ export default function Home() {
       </div>
     </div>
 
-    </MobileFadeInSection>
+    
 
-
-    <MobileFadeInSection>
 
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id="contact">
   <div className="mx-auto max-w-lg text-center">
@@ -318,7 +312,7 @@ export default function Home() {
     </div>
   </form>
 </div>
-</MobileFadeInSection>
+
 
 
 
