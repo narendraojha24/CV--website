@@ -85,28 +85,18 @@ export default function Home() {
   <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14" >
 
    
-    <div className="space-y-5">
-      <h1 className="text-2xl font-bold md:text-4xl">About</h1>
+  <div className="space-y-5">
+      <h1 className="text-2xl font-bold md:text-4xl" id="heading">About</h1>
       <p className="text-sm text-gray-600 dark:text-gray-400 md:text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-        labore cum cupiditate debitis, dignissimos aliquam quisquam repudiandae
-        vel ratione omnis ex odit aperiam explicabo vero repellat magnam saepe
-        recusandae at consequatur nemo ipsam rem quidem. Reprehenderit,
-        voluptatem excepturi, quam enim pariatur neque, debitis nam voluptate
-        aliquid sit quia error repellendus doloremque molestiae! Officiis facere
-        nostrum eaque aperiam architecto vel at non possimus expedita explicabo?
-        Necessitatibus, quasi cumque dignissimos ex quae iusto ex rem enim
-        blanditiis, dicta soluta nemo dolorem repellendus similique repudiandae
-        at corporis eius repellat natus nisi? Ullam velit repellendus obcaecati
-        dignissimos eligendi porro minus quo expedita officiis, dolor
-        consectetur!
+      Hi, I’m Narendra Ojha, a passionate and detail-oriented Frontend Developer with a strong foundation in React, JavaScript, UI/UX design, and modern web development practices. I enjoy turning complex problems into simple, beautiful, and intuitive user interfaces. With a deep interest in building seamless digital experiences, I focus on writing clean, scalable code and designing responsive layouts that work beautifully across all devices.
       </p>
-    </div>
+    </div>  
+
     
 
 
     <div className="space-y-10">
-  <h1 className='text-2xl font-bold md:text-4xl'>Experience</h1>
+  <h1 className='text-2xl font-bold md:text-4xl' id="heading">Experience</h1>
 
   <div className="flex flex-col lg:flex-row lg:gap-20">
   <ul>
@@ -147,7 +137,7 @@ export default function Home() {
 
 
 <div className="space-y-10 md:px-0" id='projects'>
-      <h1 className="text-2xl font-bold md:text-4xl">Projects</h1>
+      <h1 className="text-2xl font-bold md:text-4xl" id="heading">Projects</h1>
       <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
         A collection of projects that showcase my journey in web development — from beginner-level experiments to full-fledged applications. Use the categories below to explore.
       </p>
@@ -161,7 +151,7 @@ export default function Home() {
             className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all ${
               selectedTab === tab.value
                 ? "bg-gray-600 text-white"
-                : "bg-transparent dark:text-white text-gray-700 border-gray-400 hover:bg-blue-100 dark:hover:bg-gray-700"
+                : "bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-gray-700"
             }`}
           >
             {tab.label}

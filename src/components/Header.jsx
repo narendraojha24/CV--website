@@ -64,7 +64,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         {/* Toggle/Menu Button */}
         <button
           onClick={toggleMenu}
-          className="w-16 h-16 bg-white dark:bg-purple-700 rounded-full shadow-lg flex items-center justify-center"
+          className="w-16 h-16 bg-white dark:bg-purple-600 rounded-full shadow-lg flex items-center justify-center"
         >
           {activeIcon === null ? (
             <BiMenu className="text-2xl" />
@@ -94,7 +94,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-gray-900 rounded-full shadow-md hover:text-purple-400 text-xl">
+                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-pink-900 rounded-full shadow-md hover:text-purple-400 text-xl">
                   {item.icon}
                 </div>
               </a>
@@ -213,22 +213,24 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
-  <h1 className="text-base font-semibold md:text-2xl">HOBBIES</h1>
+  <h1 className="text-base font-semibold md:text-2xl">ACHIEVEMENTS</h1>
 
-  <div className="flex flex-wrap gap-16 p-3">
-    <ul className="flex list-disc flex-col gap-3">
-      <li>Skiing</li>
-      <li>Reading Books</li>
-      <li>Workout</li>
-    </ul>
+  <ul>
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
+      <span className="font-semibold md:text-lg">Cummins Scholarship Recipient</span>
+      <span className="font-light">Awarded by Cummins India Foundation for academic merit and Granted full reimbursement of academic fees for the entire course duration.</span>
+      <span className="text-sm text-gray-400">2023–2026</span>
+    </li>
 
-    <ul className="flex list-disc flex-col gap-3">
-      <li>Boxing</li>
-      <li>Hiking</li>
-      <li>Gaming</li>
-    </ul>
-  </div>
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
+      <span className="font-semibold md:text-lg"> Contributor</span>
+      <span className="font-light">GirlScript Summer of Code (GSSoC) – Extended Edition</span>
+      <span className="text-sm text-gray-400">2024</span>
+    </li>
+
+  </ul>
 </div>
+
 
 
 

@@ -7,3 +7,19 @@
     scroll-behavior: smooth;
 }
 
+@media (max-width: 600px) {
+    
+#heading{
+
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+}
+
+#profile-image{
+    width: 200px;
+    height: 300px;
+    margin-top: 20px;
+    align-self: center;
+}
+
