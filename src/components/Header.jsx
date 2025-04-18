@@ -94,7 +94,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-8 h-8 flex items-center justify-center bg-white dark:bg-pink-600 rounded-full shadow-md hover:text-gray-900 text-xl">
+                <div className="w-8 h-8 flex items-center justify-center bg-white dark:bg-pink-600 rounded-full shadow-md hover:text-gray-00 text-xl">
                   {item.icon}
                 </div>
               </a>
