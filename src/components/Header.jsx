@@ -60,11 +60,11 @@ export default function Header({darkMode, toggleDarkMode}) {
     <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700" id='home'>
 
 <div className="fixed top-6 left-4 z-50 sm:hidden" >
-      <div className="relative w-16 h-16">
+      <div className="relative w-14 h-14 flex items-center justify-center">
         {/* Toggle/Menu Button */}
         <button
           onClick={toggleMenu}
-          className="w-16 h-16 bg-white dark:bg-purple-600 rounded-full shadow-lg flex items-center justify-center"
+          className="w-14 h-14 bg-white dark:bg-pink-600 rounded-full shadow-lg flex items-center justify-center"
         >
           {activeIcon === null ? (
             <BiMenu className="text-2xl" />
@@ -94,7 +94,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-10 h-10 flex items-center justify-center bg-white dark:bg-pink-900 rounded-full shadow-md hover:text-purple-400 text-xl">
+                <div className="w-8 h-8 flex items-center justify-center bg-white dark:bg-pink-600 rounded-full shadow-md hover:text-gray-900 text-xl">
                   {item.icon}
                 </div>
               </a>
