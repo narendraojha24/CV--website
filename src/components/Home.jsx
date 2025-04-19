@@ -243,7 +243,7 @@ export default function Home() {
               <div className="relative">
                 <input
                   placeholder="Your name"
-                  className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
+                  className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
                   id="name"
                   name="name"
                   type="text"
@@ -276,7 +276,7 @@ export default function Home() {
               <div className="relative">
                 <input
                   placeholder="Your email"
-                  className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
+                  className="w-full rounded-lg border-gray-300 p-4 pe-12 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
                   id="email"
                   name="email"
                   type="email"
@@ -312,7 +312,7 @@ export default function Home() {
                 placeholder="Your message"
                 rows="4"
                 required
-                className="w-full rounded-lg border-gray-300 p-4 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
+                className="w-full rounded-lg border-gray-300 p-4 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent dark:bg-black dark:text-white dark:border-gray-600"
               ></textarea>
             </div>
 
@@ -322,7 +322,7 @@ export default function Home() {
                 I'll get back to you shortly!
               </p>
               <button
-                className="inline-block rounded-lg bg-pink-600 px-5 py-3 text-sm font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="inline-block rounded-lg bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:focus:ring-gray-300"
                 type="submit"
               >
                 Send Message

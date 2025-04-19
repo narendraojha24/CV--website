@@ -64,7 +64,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         {/* Toggle/Menu Button */}
         <button
           onClick={toggleMenu}
-          className="w-14 h-14 bg-white dark:bg-pink-600 rounded-full shadow-lg flex items-center justify-center"
+          className="w-14 h-14 bg-black text-white dark:bg-white dark:text-black rounded-full shadow-lg flex items-center justify-center"
         >
           {activeIcon === null ? (
             <BiMenu className="text-2xl" />
@@ -94,7 +94,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-8 h-8 flex items-center justify-center bg-white dark:bg-pink-600 rounded-full shadow-md hover:text-gray-00 text-xl">
+                <div className="w-8 h-8 flex items-center justify-center bg-white  dark:bg-black rounded-full shadow-md  hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-110 transition-transform duration-200 text-xl">
                   {item.icon}
                 </div>
               </a>
@@ -118,6 +118,20 @@ export default function Header({darkMode, toggleDarkMode}) {
           </h1>
           <h3 className="text-xl font-light">Web Developer</h3>
         </div>
+        <div className="text-center mt-4">
+      <a
+        href="/path-to-resume.pdf" // Replace with the actual path to your resume file
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-md focus:outline-none focus:ring-2 ${
+          darkMode
+            ? "text-black bg-white hover:bg-gray-200 focus:ring-gray-400"
+            : "text-white bg-pink-600 hover:bg-pink-700 focus:ring-pink-500"
+        }`}
+      >
+        Download Resume
+      </a>
+    </div>
 
         <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
           {
@@ -155,15 +169,15 @@ export default function Header({darkMode, toggleDarkMode}) {
   <ul className="space-y-3">
     <li className="flex items-center gap-2">
       <BiLogoGithub className="text-xl" />
-      <a href="https://github.com/narendraojha24"><span>narendraojha24</span></a>
+      <a href="https://github.com/narendraojha24"><span>Github</span></a>
     </li>
     <li className="flex items-center gap-2">
       <BiLogoTwitter className="text-xl" />
-      <span>narendra24</span>
+      <span>Twitter</span>
     </li>
     <li className="flex items-center gap-2">
       <BiLogoLinkedin className="text-xl" />
-      <a href="https://www.linkedin.com/in/narendraojha24/"><span>narendraojha24</span></a>
+      <a href="https://www.linkedin.com/in/narendraojha24/"><span>Linkedin</span></a>
     </li>
   </ul>
 </div>
