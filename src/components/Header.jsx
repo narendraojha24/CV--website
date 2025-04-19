@@ -109,8 +109,8 @@ export default function Header({darkMode, toggleDarkMode}) {
 
     <div className="flex flex-col gap-5">
 
-      <div className="flex flex-col items-center justify-center gap-5">
-        <img src={image} alt="" className="w-32 rounded-full"/>
+      <div className="flex flex-col items-center justify-center gap-5 ">
+        <img src={image} alt="" className="w-32 rounded-full" id='myimage'/>
 
         <div className="text-center space-y-1">
           <h1 className="text-4xl font-light">
