@@ -31,7 +31,14 @@ export default function Home() {
       {
         title: "Weather Widget",
         description: "A compact weather display using OpenWeather API.",
-        image: "food.png", // Replace with actual
+        image: "cine.jpg", // Replace with actual
+        code: "https://github.com/your-mini2",
+        live: "https://your-mini2-live.vercel.app",
+      },
+      {
+        title: "Weather Widget",
+        description: "A compact weather display using OpenWeather API.",
+        image: "text.jpg", // Replace with actual
         code: "https://github.com/your-mini2",
         live: "https://your-mini2-live.vercel.app",
       },
@@ -53,13 +60,21 @@ export default function Home() {
         code: "https://github.com/your-fullstack2",
         live: "https://your-foodapp-live.vercel.app",
       },
+      {
+        title: "Food Delivery App",
+        description:
+          "Full-featured food delivery system with admin, cart, and payment modules.",
+        image: "news.jpg",
+        code: "https://github.com/your-fullstack2",
+        live: "https://your-foodapp-live.vercel.app",
+      },
     ],
     landing: [
       {
         title: "Portfolio Website",
         description:
           "Clean, responsive React-based personal portfolio to showcase projects and contact info.",
-        image: "/images/portfolio.png",
+        image: "port.jpg",
         code: "https://github.com/your-landing1",
         live: "https://your-portfolio.vercel.app",
       },
