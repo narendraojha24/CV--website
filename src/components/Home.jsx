@@ -170,8 +170,8 @@ export default function Home() {
       onClick={() => setSelectedTab(tab.value)}
       className={`px-4 py-1.5 text-sm font-medium border transition-all ${
         selectedTab === tab.value
-          ? "bg-gray-900 text-white border-gray-900 dark:bg-white dark:text-gray-900 dark:border-gray-900"
-          : "bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-gray-700"
+          ? "bg-black text-white border-gray-900 dark:bg-white dark:text-black dark:border-gray-900 rounded-lg"
+          : "bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-gray-900 rounded-lg"
       }`}
     >
       {tab.label}
