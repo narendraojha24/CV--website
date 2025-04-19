@@ -14,17 +14,17 @@ export default function Home() {
   const allProjects = {
     mini: [
       {
-        title: "Voice to Text App",
+        title: "Signature App",
         description:
           "A simple app that converts speech into text using the Web Speech API.",
-        image: "public/furniExpert.png", // Replace with actual
+        image: "sign.jpg", // Replace with actual
         code: "https://github.com/your-mini1",
         live: "https://your-mini1-live.vercel.app",
       },
       {
-        title: "Weather Widget",
+        title: "Voice to Text",
         description: "A compact weather display using OpenWeather API.",
-        image:"public/voice.png", // Replace with actual
+        image:"Ai.jpg", // Replace with actual
         code: "https://github.com/your-mini2",
         live: "https://your-mini2-live.vercel.app",
       },
@@ -41,7 +41,7 @@ export default function Home() {
         title: "FurniExpert",
         description:
           "A MERN stack AR-based shopping site for viewing and buying furniture in real-world space.",
-        image: "/images/furniExpert.png",
+        image: "furniExpert.jpg",
         code: "https://github.com/your-fullstack1",
         live: "https://furniexpert.vercel.app",
       },
@@ -49,7 +49,7 @@ export default function Home() {
         title: "Food Delivery App",
         description:
           "Full-featured food delivery system with admin, cart, and payment modules.",
-        image: "/images/food.png",
+        image: "food.jpg",
         code: "https://github.com/your-fullstack2",
         live: "https://your-foodapp-live.vercel.app",
       },
