@@ -1,8 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import food from "/public/food.png";
-import furniExpert from "/public/furniExpert.png";
-import voice from "/public/voice.png";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
 
@@ -28,14 +24,14 @@ export default function Home() {
       {
         title: "Weather Widget",
         description: "A compact weather display using OpenWeather API.",
-        image: "/images/weather.png",
+        image:"public/voice.png", // Replace with actual
         code: "https://github.com/your-mini2",
         live: "https://your-mini2-live.vercel.app",
       },
       {
         title: "Weather Widget",
         description: "A compact weather display using OpenWeather API.",
-        image: "/images/weather.png",
+        image: "food.png", // Replace with actual
         code: "https://github.com/your-mini2",
         live: "https://your-mini2-live.vercel.app",
       },
