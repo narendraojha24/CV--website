@@ -1,11 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
+import { useEffect } from 'react'
 import { BiMoon } from 'react-icons/bi'
 import { BiSun } from 'react-icons/bi'
 import image from '/public/image2.jpg'
 import { BiCurrentLocation, BiEnvelope, BiPhone } from 'react-icons/bi'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
 import { BiMenu, BiHome, BiUser, BiCodeAlt } from 'react-icons/bi';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 import {
   FaHtml5,
@@ -19,6 +23,13 @@ import {
 import { SiCplusplus, SiTailwindcss, SiMongodb } from "react-icons/si";
 
 export default function Header({darkMode, toggleDarkMode}) {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900, // animation duration
+      once: true, // whether animation should happen only once
+    });
+  }, []);
 
 
   const SkillBadge = ({ icon, label }) => (
@@ -107,7 +118,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5" data-aos="zoom-in">
 
       <div className="flex flex-col items-center justify-center gap-5 ">
         <img src={image} alt="" className="w-32 rounded-full" id='myimage'/>
@@ -163,7 +174,7 @@ export default function Header({darkMode, toggleDarkMode}) {
   </ul>
 </div>
 
-<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
+<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
   <h1 className="text-base font-semibold md:text-2xl">SOCIAL</h1>
 
   <ul className="space-y-3">
@@ -184,7 +195,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 
-<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
+<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
   <h1 className="text-base font-semibold md:text-2xl">EDUCATION</h1>
 
   <ul>
@@ -205,7 +216,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 
-<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
+<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
       <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
       
       <div className="flex flex-wrap gap-3">
@@ -226,7 +237,7 @@ export default function Header({darkMode, toggleDarkMode}) {
     </div>
 
   
-<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700">
+<div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
   <h1 className="text-base font-semibold md:text-2xl">ACHIEVEMENTS</h1>
 
   <ul>

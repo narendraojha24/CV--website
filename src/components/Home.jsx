@@ -1,8 +1,21 @@
 import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900, // animation duration
+      once: true, // whether animation should happen only once
+    });
+  }, []);
+
+
   const [selectedTab, setSelectedTab] = useState("mini");
 
   const tabs = [
@@ -97,7 +110,7 @@ export default function Home() {
       id="profile"
     >
       <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">
-        <div className="space-y-5">
+        <div className="space-y-5" data-aos="fade-up">
           <h1 className="text-2xl font-bold md:text-4xl" id="heading">
             About
           </h1>
@@ -112,7 +125,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-10" data-aos="fade-up">
           <h1 className="text-2xl font-bold md:text-4xl" id="heading">
             Experience
           </h1>
@@ -148,7 +161,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="space-y-10 md:px-0" id="projects">
+        <div className="space-y-10 md:px-0" id="projects" data-aos="fade-up">
           <h1 className="text-2xl font-bold md:text-4xl" id="heading">
             Projects
           </h1>
@@ -159,7 +172,7 @@ export default function Home() {
           </p>
 
  {/* Tabs */}
-<div className="flex flex-wrap gap-4 mt-6">
+<div className="flex flex-wrap gap-4 mt-6" data-aos="fade-up">
   {tabs.map((tab) => (
     <button
       key={tab.value}
@@ -229,8 +242,7 @@ export default function Home() {
 
         <div
           className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
-          id="contact"
-        >
+          id="contact" data-aos="fade-up">
           <div className="mx-auto max-w-lg text-center">
             <h1 className="text-2xl font-bold sm:text-3xl text-gray-900 dark:text-white">
               Contact Me
