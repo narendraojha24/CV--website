@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaLinkedin } from "react-icons/fa";
 
 
 export default function Home() {
@@ -112,20 +113,53 @@ export default function Home() {
       id="profile"
     >
       <main className="flex max-w-[1000px] flex-col gap-10 p-5 md:mx-10 md:py-14">
-        <div className="space-y-5" data-aos="fade-up">
-          <h1 className="text-2xl font-bold md:text-4xl" id="heading">
-            About
-          </h1>
-          <p className="text-sm text-gray-600 dark:text-gray-400 md:text-base">
-            Hi, I’m Narendra Ojha, a passionate and detail-oriented Frontend
-            Developer with a strong foundation in React, JavaScript, UI/UX
-            design, and modern web development practices. I enjoy turning
-            complex problems into simple, beautiful, and intuitive user
-            interfaces. With a deep interest in building seamless digital
-            experiences, I focus on writing clean, scalable code and designing
-            responsive layouts that work beautifully across all devices.
-          </p>
-        </div>
+
+      <div className="space-y-5" data-aos="fade-up">
+  <h1 className="text-2xl font-bold md:text-4xl" id="heading">
+    About
+  </h1>
+  <p className="text-sm text-gray-600 dark:text-gray-400 md:text-base">
+    Hi, I’m Narendra Ojha, a passionate and detail-oriented Frontend
+    Developer with a strong foundation in React, JavaScript, UI/UX
+    design, and modern web development practices. I enjoy turning
+    complex problems into simple, beautiful, and intuitive user
+    interfaces. With a deep interest in building seamless digital
+    experiences, I focus on writing clean, scalable code and designing
+    responsive layouts that work beautifully across all devices.
+  </p>
+
+  {/* 👇 Photo with overlay icons - Mobile only */}
+  <div
+    className="relative w-full max-w-sm mx-auto mt-6 md:hidden"
+    data-aos="fade-up"
+  >
+    <img
+      src="image.jpg" // Replace with your actual photo path
+      alt="Narendra Ojha"
+      className="w-full h-100 object-cover rounded-xl shadow-md margin-top-4"
+    />
+
+    {/* Faded overlay with icons */}
+    <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-40 py-2 flex justify-center gap-6 rounded-b-xl">
+      <a
+        href="https://github.com/narendraojha24" // Replace with your GitHub
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-gray-300 text-2xl transition-all duration-300"
+      >
+        <FaGithub />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/narendraojha24/" // Replace with your LinkedIn
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white hover:text-blue-300 text-2xl transition-all duration-300"
+      >
+        <FaLinkedin />
+      </a>
+    </div>
+  </div>
+</div>
 
         <div className="space-y-10" data-aos="fade-up">
           <h1 className="text-2xl font-bold md:text-4xl" id="heading">
