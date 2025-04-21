@@ -9,11 +9,13 @@ import 'aos/dist/aos.css';
 export default function Home() {
 
   useEffect(() => {
-    AOS.init({
-      duration: 900, // animation duration
-      once: true, // whether animation should happen only once
-    });
-  }, []);
+      AOS.init({
+        duration: 1500, // Slower animation (1.5 seconds)
+        once: false,    // Repeat animation every time element is in view
+        mirror: true,   // Animate on scroll up as well
+        easing: 'ease-in-out', // Optional: smooth easing
+      });
+    }, []);
 
 
   const [selectedTab, setSelectedTab] = useState("mini");
@@ -172,7 +174,7 @@ export default function Home() {
           </p>
 
  {/* Tabs */}
-<div className="flex flex-wrap gap-4 mt-6" data-aos="fade-up">
+<div className="flex flex-wrap gap-4 mt-6" data-aos="zoom-in">
   {tabs.map((tab) => (
     <button
       key={tab.value}
@@ -191,7 +193,7 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
             {selectedProjects.map((project, index) => (
               <div
                 key={index}
@@ -242,7 +244,7 @@ export default function Home() {
 
         <div
           className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
-          id="contact" data-aos="fade-up">
+          id="contact" data-aos="zoom-in">
           <div className="mx-auto max-w-lg text-center">
             <h1 className="text-2xl font-bold sm:text-3xl text-gray-900 dark:text-white">
               Contact Me

@@ -26,11 +26,13 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   useEffect(() => {
     AOS.init({
-      duration: 900, // animation duration
-      once: true, // whether animation should happen only once
+      duration: 1500, // Slower animation (1.5 seconds)
+      once: false,    // Repeat animation every time element is in view
+      mirror: true,   // Animate on scroll up as well
+      easing: 'ease-in-out', // Optional: smooth easing
     });
   }, []);
-
+  
 
   const SkillBadge = ({ icon, label }) => (
     <div className="flex items-center gap-2 rounded-xl bg-black text-white p-3 text-sm font-medium dark:bg-white dark:text-black shadow-md">
@@ -144,7 +146,7 @@ export default function Header({darkMode, toggleDarkMode}) {
       </a>
     </div>
 
-        <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
+        <button className='absolute right-1 top-1' onClick={toggleDarkMode}>
           {
             darkMode ? (
               <BiSun className='text-2xl'/>
