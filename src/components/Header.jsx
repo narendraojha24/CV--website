@@ -26,7 +26,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500, // Slower animation (1.5 seconds)
+      duration: 1300, // Slower animation (1.5 seconds)
       once: false,    // Repeat animation every time element is in view
       mirror: true,   // Animate on scroll up as well
       easing: 'ease-in-out', // Optional: smooth easing
@@ -222,19 +222,19 @@ export default function Header({darkMode, toggleDarkMode}) {
       <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
       
       <div className="flex flex-wrap gap-3">
-        <SkillBadge icon={<FaHtml5 className="text-orange-500" />} label="HTML" />
-        <SkillBadge icon={<FaCss3Alt className="text-blue-500" />} label="CSS" />
-        <SkillBadge icon={<FaJs className="text-yellow-400" />} label="JavaScript" />
-        <SkillBadge icon={<FaReact className="text-cyan-400" />} label="React" />
-        <SkillBadge icon={<FaNodeJs className="text-green-600" />} label="Node.js" />
-        <SkillBadge icon={<SiMongodb className="text-green-500" />} label="MongoDB" />
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaHtml5 className="text-orange-500" />} label="HTML" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' ><SkillBadge icon={<FaCss3Alt className="text-blue-500" />} label="CSS" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaJs className="text-yellow-400" />} label="JavaScript" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<FaReact className="text-cyan-400" />} label="React" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'data-aos="zoom-out"><SkillBadge icon={<FaNodeJs className="text-green-600" />} label="Node.js" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiMongodb className="text-green-500" />} label="MongoDB" /></div>
       </div>
 
       <div className="flex flex-wrap gap-3">
-        <SkillBadge icon={<FaGithub className="text-white bg-black rounded-full" />} label="GitHub" />
-        <SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" />
-        <SkillBadge icon={<FaFigma className="text-pink-500" />} label="Figma" />
-        <SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" />
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaGithub className="text-white bg-black rounded-full" />} label="GitHub" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaFigma className="text-pink-500" />} label="Figma" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" /></div>
       </div>
     </div>
 

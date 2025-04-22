@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
       AOS.init({
-        duration: 1500, // Slower animation (1.5 seconds)
+        duration: 1300, // Slower animation (1.5 seconds)
         once: false,    // Repeat animation every time element is in view
         mirror: true,   // Animate on scroll up as well
         easing: 'ease-in-out', // Optional: smooth easing
@@ -208,15 +208,15 @@ export default function Home() {
           </p>
 
  {/* Tabs */}
-<div className="flex flex-wrap gap-4 mt-6" data-aos="zoom-in">
+<div className="flex flex-wrap gap-4 mt-6  " data-aos="zoom-in">
   {tabs.map((tab) => (
     <button
       key={tab.value}
       onClick={() => setSelectedTab(tab.value)}
       className={`px-4 py-1.5 text-sm font-medium border transition-all ${
         selectedTab === tab.value
-          ? "bg-black text-white border-gray-900 dark:bg-white dark:text-black dark:border-gray-900 rounded-lg"
-          : "bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-gray-900 rounded-lg"
+          ? "bg-black-500 shadow-lg shadow-gray-900/50 bg-black text-white border-gray-900 dark:bg-white dark:text-black dark:border-gray-900 rounded-lg"
+          : "bg-black-500 shadow-lg shadow-gray-700/50 bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-white dark:hover:text-black rounded-lg "
       }`}
     >
       {tab.label}
@@ -232,7 +232,7 @@ export default function Home() {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-xl shadow-lg border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-2xl"
-              >
+                data-aos="zoom-in" >
                 {/* Image */}
                 <div className="relative w-full h-64">
                   <img
