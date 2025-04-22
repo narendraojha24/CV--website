@@ -390,10 +390,10 @@ export default function Home() {
           </form>
         </div>
 
-        
-        <hr className="mt-10 border-gray-300 dark:border-gray-700 md:hidden" />
+
+        <hr className="border-gray-300 dark:border-gray-700 md:hidden" />
 <div
-  className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 md:hidden"
+  className="text-center text-sm text-gray-500 dark:text-gray-400 md:hidden"
 
 >
   © 2025 Narendra Ojha
