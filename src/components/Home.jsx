@@ -382,13 +382,22 @@ export default function Home() {
               </p>
               <button
                 className="bg-black-500 shadow-lg shadow-gray-900/50 inline-block rounded-lg bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:focus:ring-gray-300"
-                type="submit"
+                id="sendbutton" type="submit"
               >
                 Send Message
               </button>
             </div>
           </form>
         </div>
+
+        
+        <hr className="mt-10 border-gray-300 dark:border-gray-700 md:hidden" />
+<div
+  className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 md:hidden"
+
+>
+  © 2025 Narendra Ojha
+</div>
       </main>
     </div>
   );

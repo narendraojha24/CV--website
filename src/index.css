@@ -21,6 +21,12 @@
     font-size: 22px;
     font-weight: 700;
 }
+#sendbutton{
+    width: 80%;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+}
 }
 
 #profile-image{
