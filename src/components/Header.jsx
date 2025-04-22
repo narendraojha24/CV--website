@@ -177,7 +177,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 </div>
 
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
-  <h1 className="text-base font-semibold md:text-2xl">SOCIAL</h1>
+  <h1 className="text-base font-semibold md:text-2xl" id='heading1'>SOCIAL</h1>
 
   <ul className="space-y-3">
     <li className="flex items-center gap-2">
@@ -198,7 +198,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
-  <h1 className="text-base font-semibold md:text-2xl">EDUCATION</h1>
+  <h1 className="text-base font-semibold md:text-2xl" id='heading1'>EDUCATION</h1>
 
   <ul>
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
@@ -219,7 +219,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
-      <h1 className="text-base font-semibold md:text-2xl">SKILLS</h1>
+      <h1 className="text-base font-semibold md:text-2xl" id='heading1'>SKILLS</h1>
       
       <div className="flex flex-wrap gap-3">
         <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaHtml5 className="text-orange-500" />} label="HTML" /></div>
@@ -240,7 +240,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   
 <div className="flex flex-col items-start justify-start gap-5 border-b p-5 dark:border-gray-700" data-aos="fade-up">
-  <h1 className="text-base font-semibold md:text-2xl">ACHIEVEMENTS</h1>
+  <h1 className="text-base font-semibold md:text-2xl" id='heading1'>ACHIEVEMENTS</h1>
 
   <ul>
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">

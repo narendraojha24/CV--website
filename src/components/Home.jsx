@@ -381,7 +381,7 @@ export default function Home() {
                 I'll get back to you shortly!
               </p>
               <button
-                className="inline-block rounded-lg bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:focus:ring-gray-300"
+                className="bg-black-500 shadow-lg shadow-gray-900/50 inline-block rounded-lg bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-white dark:text-black dark:hover:bg-gray-200 dark:focus:ring-gray-300"
                 type="submit"
               >
                 Send Message
