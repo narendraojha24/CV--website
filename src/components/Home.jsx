@@ -280,7 +280,7 @@ export default function Home() {
           className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
           id="contact" data-aos="zoom-in">
           <div className="mx-auto max-w-lg text-center">
-            <h1 className="text-2xl font-bold sm:text-3xl text-gray-900 dark:text-white">
+            <h1 className="text-3xl font-bold sm:text-3xl text-gray-900 dark:text-white">
               Contact Me
             </h1>
             <p className="mt-4 text-gray-600 dark:text-gray-300">
