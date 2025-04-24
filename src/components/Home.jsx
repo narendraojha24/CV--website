@@ -32,56 +32,56 @@ export default function Home() {
       {
         title: "Signature App",
         description:
-          "A simple app that converts speech into text using the Web Speech API.",
+          "A web application built with HTML, CSS, JavaScript, and Bootstrap that allows users to create, save, download, and retrieve signatures or drawings.",
         image: "sign.jpg", // Replace with actual
-        code: "https://github.com/your-mini1",
-        live: "https://your-mini1-live.vercel.app",
+        code: "https://github.com/narendraojha24/Signature-app",
+        live: " https://narendraojha24.github.io/Signature-app/",
       },
       {
-        title: "Voice to Text",
-        description: "A compact weather display using OpenWeather API.",
+        title: "AI Accessibility Assistant",
+        description: "AI Accessibility Assistant is a Chrome extension that leverages AI to enhance digital accessibility for users.",
         image:"Ai.jpg", // Replace with actual
-        code: "https://github.com/your-mini2",
-        live: "https://your-mini2-live.vercel.app",
+        code: "https://github.com/narendraojha24/AI-Accessibility-Assistant",
+        live: "https://github.com/narendraojha24/AI-Accessibility-Assistant",
       },
       {
-        title: "Weather Widget",
-        description: "A compact weather display using OpenWeather API.",
+        title: "CineSearch",
+        description: "This web application allows users to search for movies and view detailed information such as titles, posters, and ratings.",
         image: "cine.jpg", // Replace with actual
-        code: "https://github.com/your-mini2",
-        live: "https://your-mini2-live.vercel.app",
+        code: "https://github.com/narendraojha24/CineSearch",
+        live: "https://cine-search-seven.vercel.app/",
       },
       {
-        title: "Weather Widget",
-        description: "A compact weather display using OpenWeather API.",
+        title: "Voice-to-Text Converter",
+        description: "A React.js project that uses the Web Speech API for real-time voice-to-text conversion.",
         image: "text.jpg", // Replace with actual
-        code: "https://github.com/your-mini2",
-        live: "https://your-mini2-live.vercel.app",
+        code: "https://github.com/narendraojha24/Voice-text-converter",
+        live: "https://voicetext-converter.vercel.app/",
       },
     ],
     fullstack: [
       {
         title: "FurniExpert",
         description:
-          "A MERN stack AR-based shopping site for viewing and buying furniture in real-world space.",
+          "A modern furniture shopping website where users can visualize 3D models of furniture in real-world environments using WebXR technology. ",
         image: "furniExpert.jpg",
         code: "https://github.com/your-fullstack1",
         live: "https://furniexpert.vercel.app",
       },
       {
-        title: "Food Delivery App",
+        title: "Foodzy",
         description:
-          "Full-featured food delivery system with admin, cart, and payment modules.",
+          "Foodzy is a modern food delivery platform built using the MERN stack (MongoDB, Express.js, React, Node.js).",
         image: "food.jpg",
-        code: "https://github.com/your-fullstack2",
-        live: "https://your-foodapp-live.vercel.app",
+        code: "https://github.com/narendraojha24/Foodzy",
+        live: "https://foodzy-eta.vercel.app/",
       },
       {
-        title: "Food Delivery App",
+        title: "NewsWave",
         description:
-          "Full-featured food delivery system with admin, cart, and payment modules.",
+          "NewsWave is a responsive news aggregator web application that provides users with a clean, modern interface to browse and discover news from multiple sources.",
         image: "news.jpg",
-        code: "https://github.com/your-fullstack2",
+        code: "https://github.com/narendraojha24/NewsWave-Modern-News-Aggregator",
         live: "https://your-foodapp-live.vercel.app",
       },
     ],
@@ -91,16 +91,8 @@ export default function Home() {
         description:
           "Clean, responsive React-based personal portfolio to showcase projects and contact info.",
         image: "port.jpg",
-        code: "https://github.com/your-landing1",
-        live: "https://your-portfolio.vercel.app",
-      },
-      {
-        title: "Startup Landing Page",
-        description:
-          "Modern landing page built using TailwindCSS and React for a fictional startup.",
-        image: "/images/startup.png",
-        code: "https://github.com/your-landing2",
-        live: "https://startup-page.vercel.app",
+        code: "https://github.com/narendraojha24/Portfolio",
+        live: " https://narendraojha24.github.io/Portfolio/",
       },
     ],
   };

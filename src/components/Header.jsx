@@ -120,7 +120,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 
-    <div className="flex flex-col gap-5" data-aos="zoom-in">
+    <div className="flex flex-col gap-5" >
 
       <div className="flex flex-col items-center justify-center gap-5 ">
         <img src={image} alt="" className="w-32 rounded-full" id='myimage'/>
@@ -133,7 +133,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         </div>
         <div className="text-center mt-4">
       <a
-        href="/path-to-resume.pdf" // Replace with the actual path to your resume file
+        href="https://drive.google.com/file/d/1F-KhbNeiYUkW5z8FseCp9s6ZPQf0FY2p/view?usp=drivesdk" // Replace with the actual path to your resume file
         target="_blank"
         rel="noopener noreferrer"
         className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-md focus:outline-none focus:ring-2 ${
@@ -142,11 +142,11 @@ export default function Header({darkMode, toggleDarkMode}) {
             : "text-white bg-black hover:bg-gray-900 focus:ring-pink-500"
         }`}
       >
-       Resume
+       Download Resume
       </a>
     </div>
 
-        <button className='absolute right-1 top-1' onClick={toggleDarkMode}>
+        <button className='absolute right-10 top-10' onClick={toggleDarkMode}>
           {
             darkMode ? (
               <BiSun className='text-2xl'/>
@@ -208,9 +208,9 @@ export default function Header({darkMode, toggleDarkMode}) {
     </li>
 
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
-      <span className="font-semibold md:text-lg">Senior Secondary</span>
+      <span className="font-semibold md:text-lg">Senior Secondary ( Class 12)</span>
       <span className="font-light">Sri Sathya Sai Vidya Vihar , Gail</span>
-      <span className="text-sm text-gray-400">2020–2022</span>
+      <span className="text-sm text-gray-400">2021–2022</span>
     </li>
 
   </ul>
@@ -223,18 +223,18 @@ export default function Header({darkMode, toggleDarkMode}) {
       
       <div className="flex flex-wrap gap-3">
         <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaHtml5 className="text-orange-500" />} label="HTML" /></div>
-        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' ><SkillBadge icon={<FaCss3Alt className="text-blue-500" />} label="CSS" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<FaCss3Alt className="text-blue-500" />} label="CSS" /></div>
         <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaJs className="text-yellow-400" />} label="JavaScript" /></div>
-        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<FaReact className="text-cyan-400" />} label="React" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<FaReact className="text-cyan-400" />} label="React" /></div>
         <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'data-aos="zoom-out"><SkillBadge icon={<FaNodeJs className="text-green-600" />} label="Node.js" /></div>
-        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiMongodb className="text-green-500" />} label="MongoDB" /></div>
+        <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<SiMongodb className="text-green-500" />} label="MongoDB" /></div>
       </div>
 
       <div className="flex flex-wrap gap-3">
       <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaGithub className="text-white bg-black rounded-full" />} label="GitHub" /></div>
-      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" /></div>
       <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaFigma className="text-pink-500" />} label="Figma" /></div>
-      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl'><SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" /></div>
       </div>
     </div>
 
