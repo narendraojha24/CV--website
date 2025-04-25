@@ -122,7 +122,7 @@ export default function Home() {
 
   {/* 👇 Photo with overlay icons - Mobile only */}
   <div
-    className="relative w-full max-w-sm mx-auto mt-6 md:hidden"
+    className="relative w-full max-w-sm mx-auto mt-6 md:hidden shadow-xl"
     data-aos="fade-up"
   >
     <img
@@ -219,12 +219,12 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 " data-aos="fade-up">
             {selectedProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg border dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-2xl"
-                data-aos="zoom-in" >
+                className="group relative overflow-hidden rounded-xl shadow-lg dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-2xl "
+                data-aos="zoom-in" id="project-box" >
                 {/* Image */}
                 <div className="relative w-full h-64">
                   <img

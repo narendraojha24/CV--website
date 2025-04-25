@@ -208,7 +208,7 @@ export default function Header({darkMode, toggleDarkMode}) {
     </li>
 
     <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
-      <span className="font-semibold md:text-lg">Senior Secondary ( Class 12)</span>
+      <span className="font-semibold md:text-lg">Senior Secondary  ( Class 12)</span>
       <span className="font-light">Sri Sathya Sai Vidya Vihar , Gail</span>
       <span className="text-sm text-gray-400">2021–2022</span>
     </li>
