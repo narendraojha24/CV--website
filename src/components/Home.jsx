@@ -219,51 +219,56 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 " data-aos="fade-up">
-            {selectedProjects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg dark:border-gray-700 transition-transform transform hover:-translate-y-2 hover:shadow-2xl "
-                data-aos="zoom-in" id="project-box" >
-                {/* Image */}
-                <div className="relative w-full h-64">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
+         
+          {/* Projects Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
+  {selectedProjects.map((project, index) => (
+    <div
+      key={index}
+      className="relative w-full max-w-sm mx-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-white/10 backdrop-blur-md shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-105 hover:-rotate-1 overflow-hidden"
+      data-aos="zoom-in"
+      id="project-box"
+    >
+      {/* Image */}
+      <div className="w-full h-48">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover border-b border-gray-200 dark:border-gray-700"
+        />
+      </div>
 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-5">
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white text-2xl hover:text-blue-400"
-                    title="Code Preview"
-                  >
-                    <FaGithub />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white text-2xl hover:text-green-400"
-                    title="Live Project"
-                  >
-                    <FaExternalLinkAlt />
-                  </a>
-                </div>
+      {/* Info Section */}
+      <div className="p-4">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">{project.title}</h2>
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+      </div>
 
-                {/* Project Info */}
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4">
-                  <h2 className="text-lg font-semibold text-white">{project.title}</h2>
-                  <p className="text-sm text-gray-300">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Always Visible Action Buttons */}
+      <div className="absolute bottom-3 right-3 flex gap-2 bg-white/80 dark:bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
+        <a
+          href={project.code}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black dark:text-white text-lg hover:text-purple-500 transition-colors"
+          title="GitHub"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black dark:text-white text-lg hover:text-green-500 transition-colors"
+          title="Live"
+        >
+          <FaExternalLinkAlt />
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
 
 
