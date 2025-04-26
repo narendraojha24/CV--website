@@ -220,7 +220,6 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-         
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
   {selectedProjects.map((project, index) => (
     <div
@@ -239,35 +238,36 @@ export default function Home() {
       </div>
 
       {/* Info Section */}
-      <div className="p-4">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white">{project.title}</h2>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
-      </div>
+      <div className="p-4 flex flex-col items-center space-y-3">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white text-center">{project.title}</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-300 text-center">{project.description}</p>
 
-      {/* Always Visible Action Buttons */}
-      <div className="absolute bottom-4 right-4 flex gap-5 bg-black dark:bg-white backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
-        <a
-          href={project.code}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white dark:text-black text-lg hover:text-purple-500 transition-colors"
-          title="GitHub"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white dark:text-black text-lg hover:text-green-500 transition-colors"
-          title="Live"
-        >
-          <FaExternalLinkAlt />
-        </a>
+        {/* New Icons Section */}
+        <div className="flex gap-4 mt-3">
+          <a
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors"
+            title="GitHub"
+          >
+            <FaGithub className="text-xl" />
+          </a>
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-300 transition-colors"
+            title="Live"
+          >
+            <FaExternalLinkAlt className="text-lg" />
+          </a>
+        </div>
       </div>
     </div>
   ))}
 </div>
+
 
         </div>
 
