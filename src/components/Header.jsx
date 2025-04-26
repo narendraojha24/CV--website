@@ -7,6 +7,10 @@ import image from '/public/image2.jpg'
 import { BiCurrentLocation, BiEnvelope, BiPhone } from 'react-icons/bi'
 import { BiLogoGithub, BiLogoTwitter, BiLogoLinkedin } from 'react-icons/bi'
 import { BiMenu, BiHome, BiUser, BiCodeAlt } from 'react-icons/bi';
+import { FaBootstrap } from 'react-icons/fa';
+import { SiVisualstudiocode } from 'react-icons/si';
+import { FaXTwitter } from "react-icons/fa6"; 
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -184,10 +188,12 @@ export default function Header({darkMode, toggleDarkMode}) {
       <BiLogoGithub className="text-xl" />
       <a href="https://github.com/narendraojha24"><span>Github</span></a>
     </li>
-    <li className="flex items-center gap-2">
-      <BiLogoTwitter className="text-xl" />
-      <span>Twitter</span>
-    </li>
+
+<li className="flex items-center gap-2">
+  <FaXTwitter className="text-xl" />
+  <span>X</span>
+</li>
+
     <li className="flex items-center gap-2">
       <BiLogoLinkedin className="text-xl" />
       <a href="https://www.linkedin.com/in/narendraojha24/"><span>Linkedin</span></a>
@@ -235,6 +241,12 @@ export default function Header({darkMode, toggleDarkMode}) {
       <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<SiCplusplus className="text-blue-600" />} label="C++" /></div>
       <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out"><SkillBadge icon={<FaFigma className="text-pink-500" />} label="Figma" /></div>
       <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in"><SkillBadge icon={<SiTailwindcss className="text-sky-400" />} label="Tailwind CSS" /></div>
+      <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-out">
+      <SkillBadge icon={<FaBootstrap className="text-purple-600" />} label="Bootstrap" />
+    </div>
+    <div className='bg-black-500 shadow-lg shadow-gray-900/50 rounded-xl' data-aos="zoom-in">
+      <SkillBadge icon={<SiVisualstudiocode className="text-blue-400" />} label="VS Code" />
+    </div>
       </div>
     </div>
 

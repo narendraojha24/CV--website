@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; 
 
 
 export default function Home() {
@@ -66,7 +67,7 @@ export default function Home() {
           "A modern furniture shopping website where users can visualize 3D models of furniture in real-world environments using WebXR technology. ",
         image: "furniExpert.jpg",
         code: "https://github.com/your-fullstack1",
-        live: "https://furniexpert.vercel.app",
+        live: "https://furni-expert-ar-shopping.vercel.app/",
       },
       {
         title: "Foodzy",
@@ -220,13 +221,12 @@ export default function Home() {
 
           {/* Projects Grid */}
          
-          {/* Projects Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
   {selectedProjects.map((project, index) => (
     <div
       key={index}
-      className="relative w-full max-w-sm mx-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-white/10 backdrop-blur-md shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-105 hover:-rotate-1 overflow-hidden"
-      data-aos="zoom-in"
+      className="relative w-full max-w-sm mx-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-black backdrop-blur-md shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-105 hover:-rotate-1 overflow-hidden"
+      data-aos="fade-up"
       id="project-box"
     >
       {/* Image */}
@@ -245,12 +245,12 @@ export default function Home() {
       </div>
 
       {/* Always Visible Action Buttons */}
-      <div className="absolute bottom-3 right-3 flex gap-2 bg-white/80 dark:bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
+      <div className="absolute bottom-4 right-4 flex gap-5 bg-black dark:bg-white backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
         <a
           href={project.code}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black dark:text-white text-lg hover:text-purple-500 transition-colors"
+          className="text-white dark:text-black text-lg hover:text-purple-500 transition-colors"
           title="GitHub"
         >
           <FaGithub />
@@ -259,7 +259,7 @@ export default function Home() {
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black dark:text-white text-lg hover:text-green-500 transition-colors"
+          className="text-white dark:text-black text-lg hover:text-green-500 transition-colors"
           title="Live"
         >
           <FaExternalLinkAlt />
@@ -387,14 +387,45 @@ export default function Home() {
           </form>
         </div>
 
+        {/* Contact Icons */}
+<div className="mt-6 flex justify-center gap-6" data-aos="fade-up">
+  <a
+    href="https://github.com/narendraojha24"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 dark:text-white hover:text-black dark:hover:text-gray-300 text-2xl transition-colors"
+  >
+    <FaGithub />
+  </a>
+  <a
+    href="https://x.com/your-x-username"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 dark:text-white hover:text-black dark:hover:text-gray-300 text-2xl transition-colors"
+  >
+    <FaXTwitter />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/narendraojha24/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-700 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 text-2xl transition-colors"
+  >
+    <FaLinkedin />
+  </a>
+</div>
 
-        <hr className="border-gray-300 dark:border-gray-700 md:hidden" />
+
+
+        <hr className="border-gray-300 dark:border-gray-700" />
 <div
-  className="text-center text-sm text-gray-500 dark:text-gray-400 md:hidden"
+  className="text-center text-sm text-gray-500 dark:text-gray-400"
 
 >
   © 2025 Narendra Ojha
 </div>
+
+
       </main>
     </div>
   );

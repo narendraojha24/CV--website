@@ -10,7 +10,7 @@
 @media (max-width: 500px) {
     
 #heading{
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 40px;
     margin-top: 30px;
 }
@@ -23,7 +23,7 @@
 }
 #sendbutton{
     width: 80%;
-    height: 40px;
+    height: 50px;
     font-size: 12px;
     text-align: center;
 }
@@ -35,6 +35,16 @@
     margin-top: 20px;
     align-self: center;
 }
-#project-box{
-    box-shadow: 0px 1px 0px 1px rgb(185, 184, 184);
+
+#project-box {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.416), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
+
+#project-box:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.959), 0px 4px 6px rgba(0, 0, 0, 0.071); /* Enhanced shadow on hover for dark mode *//* Light mode shadow */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+
+
