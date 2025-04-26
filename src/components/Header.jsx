@@ -30,7 +30,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   useEffect(() => {
     AOS.init({
-      duration: 1300, // Slower animation (1.5 seconds)
+      duration: 1300, // Slower animation (1.3 seconds)
       once: false,    // Repeat animation every time element is in view
       mirror: true,   // Animate on scroll up as well
       easing: 'ease-in-out', // Optional: smooth easing
@@ -111,7 +111,7 @@ export default function Header({darkMode, toggleDarkMode}) {
                   transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                 }}
               >
-                <div className="w-8 h-8 flex items-center justify-center bg-white  dark:bg-black rounded-full shadow-md  hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black hover:scale-110 transition-transform duration-200 text-xl">
+                <div className="w-8 h-8 flex items-center justify-center bg-black  dark:bg-white rounded-full shadow-md  hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-black text-white dark:text-black hover:scale-110 transition-transform duration-200 text-xl">
                   {item.icon}
                 </div>
               </a>
@@ -129,12 +129,31 @@ export default function Header({darkMode, toggleDarkMode}) {
       <div className="flex flex-col items-center justify-center gap-5 ">
         <img src={image} alt="" className="w-32 rounded-full" id='myimage'/>
 
-        <div className="text-center space-y-1">
-          <h1 className="text-4xl font-light">
-            Narendra <span className="font-semibold">Ojha</span>
-          </h1>
-          <h3 className="text-xl font-light">Web Developer</h3>
-        </div>
+
+        
+        <div className="text-center space-y-2">
+  {/* Static "Hi, I'm" */}
+  <h2 className="text-lg md:text-xl text-black dark:text-white font-[Poppins]">
+    Hi, I'm
+  </h2>
+
+  {/* Animated Name */}
+  <h1 className="text-3xl md:text-3xl font-light text-black dark:text-white animate-typing-once overflow-hidden whitespace-nowrap border-r-4 border-black dark:border-white mx-auto font-[Poppins]">
+    Narendra <span className="font-semibold">Ojha</span>
+  </h1>
+
+  {/* Subheading */}
+  <h3 className="text-xl font-light">
+    Web Developer
+  </h3>
+
+</div>
+
+
+
+
+
+
         <div className="text-center mt-4">
       <a
         href="https://drive.google.com/file/d/1F-KhbNeiYUkW5z8FseCp9s6ZPQf0FY2p/view?usp=drivesdk" // Replace with the actual path to your resume file

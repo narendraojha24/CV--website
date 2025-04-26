@@ -48,3 +48,22 @@
 
 
 
+@keyframes typing-once {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-once {
+    0%, 100% { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }
+  
+  /* Add in your CSS */
+  .animate-typing-once {
+    width: fit-content;
+    animation: typing-once 3s steps(20, end) 1, blink-once 0.75s step-end 5;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+  
