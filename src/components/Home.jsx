@@ -95,6 +95,14 @@ export default function Home() {
         code: "https://github.com/narendraojha24/Portfolio",
         live: " https://narendraojha24.github.io/Portfolio/",
       },
+      {
+        title: "Kranti Foundation",
+        description:
+          "It is a modern, responsive, and user-friendly frontend web application designed to promote blood donation and connect donors with recipients.",
+        image: "blood.png",
+        code: "https://github.com/narendraojha24/Kranti-Foundation",
+        live: " https://kranti-foundation.vercel.app/",
+      },
     ],
   };
 
@@ -201,7 +209,10 @@ export default function Home() {
           </p>
 
  {/* Tabs */}
-<div className="flex flex-wrap gap-4 mt-6  " data-aos="zoom-in">
+ <div
+  className="flex justify-center items-center flex-wrap gap-4 mt-6"
+  data-aos="zoom-in"
+>
   {tabs.map((tab) => (
     <button
       key={tab.value}
@@ -209,7 +220,7 @@ export default function Home() {
       className={`px-4 py-1.5 text-sm font-medium border transition-all ${
         selectedTab === tab.value
           ? "bg-black-500 shadow-lg shadow-gray-900/50 bg-black text-white border-gray-900 dark:bg-white dark:text-black dark:border-gray-900 rounded-lg"
-          : "bg-black-500 shadow-lg shadow-gray-700/50 bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-white dark:hover:text-black rounded-lg "
+          : "bg-black-500 shadow-lg shadow-gray-700/50 bg-transparent dark:text-white text-gray-700 border-white-700 hover:bg-purple-100 dark:hover:bg-white dark:hover:text-black rounded-lg"
       }`}
     >
       {tab.label}
