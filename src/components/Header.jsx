@@ -166,7 +166,7 @@ export default function Header({darkMode, toggleDarkMode}) {
       </a>
       <a
     href="#contact" // Replace with the actual section or link for connecting
-    className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-lg shadow-gray-900/50 focus:outline-none focus:ring-2 ${
+    className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-md focus:outline-none focus:ring-2 ${
       darkMode
         ? "text-black bg-white hover:bg-gray-200 focus:ring-gray-400"
         : "text-black bg-white hover:bg-white focus:ring-pink-500 border-2 border-black"
