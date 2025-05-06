@@ -151,10 +151,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
 
 
-
-
-
-        <div className="text-center mt-4">
+        <div className="text-center mt-4 flex justify-center gap-4">
       <a
         href="https://drive.google.com/file/d/1F-KhbNeiYUkW5z8FseCp9s6ZPQf0FY2p/view?usp=drivesdk" // Replace with the actual path to your resume file
         target="_blank"
@@ -165,8 +162,18 @@ export default function Header({darkMode, toggleDarkMode}) {
             : "text-white bg-black hover:bg-gray-900 focus:ring-pink-500"
         }`}
       >
-       Download Resume
+      Resume
       </a>
+      <a
+    href="#contact" // Replace with the actual section or link for connecting
+    className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-md focus:outline-none focus:ring-2 ${
+      darkMode
+        ? "text-black bg-white hover:bg-gray-200 focus:ring-gray-400"
+        : "text-black bg-white hover:bg-white focus:ring-pink-500 border-2 border-black"
+    }`}
+  >
+    Connect
+  </a>
     </div>
 
         <button className='absolute right-10 top-10' onClick={toggleDarkMode}>

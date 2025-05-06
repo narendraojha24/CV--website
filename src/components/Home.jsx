@@ -231,12 +231,12 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" >
   {selectedProjects.map((project, index) => (
     <div
       key={index}
       className="relative w-full max-w-sm mx-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-black backdrop-blur-md shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-105 hover:-rotate-1 overflow-hidden"
-      data-aos="fade-up"
+    
       id="project-box"
     >
       {/* Image */}
