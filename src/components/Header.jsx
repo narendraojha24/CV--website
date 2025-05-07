@@ -39,7 +39,7 @@ export default function Header({darkMode, toggleDarkMode}) {
   
 
   const SkillBadge = ({ icon, label }) => (
-    <div className="flex items-center gap-2 rounded-xl bg-black text-white p-3 text-sm font-medium dark:bg-white dark:text-black shadow-md">
+    <div className="flex items-center gap-2.5 rounded-xl bg-black text-white p-3 text-sm font-medium dark:bg-white dark:text-black shadow-md">
       {icon}
       {label}
     </div>
