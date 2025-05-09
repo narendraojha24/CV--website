@@ -75,10 +75,9 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   return (
     <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700" id='home'>
-
+{/*
 <div className="fixed top-6 left-4 z-50 sm:hidden" >
       <div className="relative w-14 h-14 flex items-center justify-center">
-        {/* Toggle/Menu Button */}
         <button
           onClick={toggleMenu}
           className="w-14 h-14 bg-black text-white dark:bg-white dark:text-black rounded-full shadow-lg flex items-center justify-center"
@@ -90,7 +89,6 @@ export default function Header({darkMode, toggleDarkMode}) {
           )}
         </button>
 
-        {/* Curved Icons */}
         {(menuOpen || activeIcon !== null) &&
           icons.map((item, index) => {
             if (activeIcon !== null && activeIcon !== index) return null;
@@ -119,6 +117,28 @@ export default function Header({darkMode, toggleDarkMode}) {
           })}
       </div>
     </div>
+    */}
+
+<div
+  className="fixed bottom-10 left-4 right-4 bg-black dark:bg-white rounded-3xl shadow-lg flex justify-around items-center py-3 z-50 sm:hidden"
+>
+  {icons.map((item, index) => (
+    <a
+      key={index}
+      href={item.href}
+      title={item.title}
+      className="relative flex items-center justify-center text-white dark:text-black hover:text-gray-300 dark:hover:text-gray-700 transition-colors"
+    >
+      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+        {item.icon}
+      </div>
+      {/* Tooltip for icon name */}
+      <span className="absolute bottom-[-25px] text-xs text-gray-700 dark:text-gray-300 opacity-0 hover:opacity-100 transition-opacity">
+        {item.title}
+      </span>
+    </a>
+  ))}
+</div>
           
 
 
