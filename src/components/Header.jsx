@@ -129,7 +129,7 @@ export default function Header({darkMode, toggleDarkMode}) {
       title={item.title}
       className="relative flex items-center justify-center text-white dark:text-black hover:text-gray-300 dark:hover:text-gray-700 transition-colors"
     >
-      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+      <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
         {item.icon}
       </div>
       {/* Tooltip for icon name */}
