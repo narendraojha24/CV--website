@@ -399,7 +399,7 @@ export default function Home() {
         </div>
 
         {/* Contact Icons */}
-<div className="mt-6 flex justify-center gap-6" data-aos="fade-up">
+<div className="mt-0 flex justify-center gap-6" data-aos="fade-up">
   <a
     href="https://github.com/narendraojha24"
     target="_blank"
