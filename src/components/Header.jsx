@@ -76,7 +76,7 @@ export default function Header({darkMode, toggleDarkMode}) {
   return (
     <div className="min-h-screen flex-1 relative p-10 transition-all duration-500 dark:bg-black dark:text-white sm:border-r dark:border-gray-700" id='home'>
 <div className="fixed top-6 left-4 z-50 sm:hidden">
-  <div className="relative w-14 h-14 rounded-full bg-opacity-40 dark:bg-opacity-40 transparent bg-white text-black dark:bg-black dark:text-white flex items-center justify-center text-4xl font-bold">N.</div>
+  <div className="relative w-14 h-14 rounded-full bg-opacity-40 dark:bg-opacity-40 transparent bg-white text-black dark:bg-black dark:text-white flex items-center justify-center text-5xl font-bold not-italic">N.</div>
 </div>
 
 {/*
