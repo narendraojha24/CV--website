@@ -197,7 +197,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         : "text-black bg-white hover:bg-white focus:ring-pink-500 border-2 border-black"
     }`}
   >
-    Connect
+    Contact
   </a>
     </div>
 
