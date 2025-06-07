@@ -2,7 +2,7 @@
 
 A **responsive** and **stylish** personal portfolio showcasing my **skills**, **experience**, and **projects**. Built using **modern web technologies** for a sleek and professional look.
 
-🔗 **Live Demo:** [cv-website-wine.vercel.app](https://cv-website-wine.vercel.app)
+🔗 **Live Demo:(https://cv-website-wine.vercel.app/)
 
 ---
 
@@ -11,8 +11,7 @@ A **responsive** and **stylish** personal portfolio showcasing my **skills**, **
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Frameworks:** React (or Vanilla JS, depending on your stack)
 - **Styling:** Tailwind CSS / SCSS / CSS Modules
-- **Deployment:** [Vercel](https://vercel.com/)
-
+- **Deployment:** [Vercel]()
 ---
 
 ## 📁 Features
@@ -26,16 +25,3 @@ A **responsive** and **stylish** personal portfolio showcasing my **skills**, **
 ---
 
 ## 📸 Screenshots
-
-<!-- Add screenshots of your portfolio -->
-![Portfolio Preview](./screenshots/preview.png)
-
----
-
-## 🚀 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/your-portfolio-repo.git
-cd your-portfolio-repo
