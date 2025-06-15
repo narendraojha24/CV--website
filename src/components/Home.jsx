@@ -85,6 +85,14 @@ export default function Home() {
         code: "https://github.com/narendraojha24/NewsWave-Modern-News-Aggregator",
         live: "https://your-foodapp-live.vercel.app",
       },
+      {
+        title: "GauSevaConnect",
+        description:
+          "A spiritually inspired website dedicated to promoting Gau Seva (cow protection and care) through the Radha Krishna Gau Seva Sansthan. Built with simplicity and devotion, the site shares the organization’s mission, displays volunteer information, and offers an easy way to connect.",
+        image: "gauseva.png",
+        code: "https://github.com/narendraojha24/RadhaKrishna-GauSevaSansthan",
+        live: "https://radha-krishna-gau-seva-sansthan.vercel.app/",
+      },
     ],
     landing: [
       {
