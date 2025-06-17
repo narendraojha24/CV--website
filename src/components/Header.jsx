@@ -258,17 +258,17 @@ export default function Header({darkMode, toggleDarkMode}) {
   <h1 className="text-base font-semibold md:text-2xl" id='heading1'>EDUCATION</h1>
 
   <ul>
-    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform" data-aos="fade-left">
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
       <span className="font-semibold md:text-lg">B.Tech <br />(Computer Science)</span>
       <span className="font-light">Jaypee University Of Engineering And Technology</span>
-      <span className="text-sm text-gray-400">2022 – 2026</span>
+      <span className="text-sm text-gray-400">2022–2026</span>
     </li>
 
-    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform" data-aos="fade-right">
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
       <span className="font-semibold md:text-lg">Senior Secondary  <br />
-      ( Class 12 )</span>
+      ( Class 12)</span>
       <span className="font-light">Sri Sathya Sai Vidya Vihar , Gail</span>
-      <span className="text-sm text-gray-400">2021 – 2022</span>
+      <span className="text-sm text-gray-400">2021–2022</span>
     </li>
 
   </ul>
@@ -307,13 +307,13 @@ export default function Header({darkMode, toggleDarkMode}) {
   <h1 className="text-base font-semibold md:text-2xl" id='heading1'>ACHIEVEMENTS</h1>
 
   <ul>
-    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform" data-aos="fade-left">
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
       <span className="font-semibold md:text-lg">Cummins Scholarship Recipient</span>
       <span className="font-light">Awarded by Cummins India Foundation for academic merit and Granted full reimbursement of academic fees for the entire course duration.</span>
       <span className="text-sm text-gray-400">2023–2026</span>
     </li>
 
-    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform" data-aos="fade-right">
+    <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
       <span className="font-semibold md:text-lg"> Contributor</span>
       <span className="font-light">GirlScript Summer of Code (GSSoC) – Extended Edition</span>
       <span className="text-sm text-gray-400">2024</span>

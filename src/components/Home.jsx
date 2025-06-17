@@ -239,7 +239,7 @@ export default function Home() {
 
 
           {/* Projects Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" data-aos="fade-up" >
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6" >
   {selectedProjects.map((project, index) => (
     <div
       key={index}
@@ -294,7 +294,7 @@ export default function Home() {
 
         <div
           className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"
-          id="contact" data-aos="fade-up">
+          id="contact" data-aos="zoom-in">
           <div className="mx-auto max-w-lg text-center">
             <h1 className="text-3xl font-bold sm:text-3xl text-gray-900 dark:text-white">
               Contact Me
