@@ -177,7 +177,7 @@ export default function Home() {
 
           <div className="flex flex-col lg:flex-row lg:gap-20">
             <ul>
-              <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
+              <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform" data-aos="fade-in">
                 <span className="text-lg font-semibold">
                 Software Engineering Intern
                 </span>
