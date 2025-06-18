@@ -404,10 +404,10 @@ export default function Home() {
               </button>
             </div>
           </form>
-        </div>
+        
 
         {/* Contact Icons */}
-<div className=" flex justify-center gap-6" data-aos="fade-up">
+<div className=" flex justify-center gap-6 mt-10" data-aos="fade-up">
   <a
     href="https://github.com/narendraojha24"
     target="_blank"
@@ -432,6 +432,8 @@ export default function Home() {
   >
     <FaLinkedin />
   </a>
+</div>
+
 </div>
 
 
