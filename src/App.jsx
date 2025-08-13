@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import ParticlesBackground from "./components/ParticlesBackground";
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
@@ -13,7 +14,9 @@ function App() {
 
   return (
     <>
-      <div className={`min-h-screen w-full flex flex-col sm:flex-row subpixel-antialiased ${darkMode ? "bg-black" : "bg-white"}`}>
+ 
+      <div className={`min-h-screen w-full flex flex-col sm:flex-row subpixel-antialiased ${darkMode ? "bg-transparent" : "bg-transparent"}`}>
+         <ParticlesBackground />
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Home/>
       </div>

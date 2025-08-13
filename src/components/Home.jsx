@@ -195,7 +195,7 @@ export default function Home() {
                 <span className="font-light">Intern Infobyte</span>
                 <span className="text-sm text-gray-400">June 2025 - July 2025</span>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Successfully completed a 6-week internship with INTERN INFOBYTE, where I built a fully functional and modern e-commerce website – ShopKart using the latest tech stack!
+                  Successfully completed a 6-week internship with INTERN INFOBYTE, where I built a fully functional and modern e-commerce website – ShopKart using the latest tech stack.
                 </p>
               </li>
             </ul>
