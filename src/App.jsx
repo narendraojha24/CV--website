@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
-
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);

@@ -182,26 +182,22 @@ export default function Home() {
                 Software Engineering Intern
                 </span>
                 <span className="font-light"> GAIL (India) Limited</span>
-                <span className="text-sm text-gray-400">May 2020– July 2024</span>
+                <span className="text-sm text-gray-400">May 2020 – July 2024</span>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                 This internship has been an invaluable experience, providing me with hands-on exposure to cutting-edge AR technology and its practical applications. The project challenged me to expand my technical skills and apply my knowledge in a real-world setting.
                 </p>
               </li>
 
-           {/*   <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
+              <li className="relative flex flex-col gap-1 border-l p-6 before:absolute before:left-[-6px] before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rounded-full before:bg-black dark:before:bg-white before:transform">
                 <span className="text-lg font-semibold">
-                  Junior Web Developer
+                  Full Stack Developer
                 </span>
-                <span className="font-light">Company X</span>
-                <span className="text-sm text-gray-400">2016–2018</span>
+                <span className="font-light">Intern Infobyte</span>
+                <span className="text-sm text-gray-400">June 2025 - July 2025</span>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Error dolorem odio, obcaecati voluptatem suscipit tenetur
-                  consectetur amet, facere ratione incidunt maiores accusantium
-                  excepturi! Repellendus, animi nihil? Accusantium consequuntur
-                  libero odio!
+                  Successfully completed a 6-week internship with INTERN INFOBYTE, where I built a fully functional and modern e-commerce website – ShopKart using the latest tech stack!
                 </p>
-              </li>*/}
+              </li>
             </ul>
           </div>
         </div>
