@@ -16,7 +16,7 @@ const ParticlesBackground = () => {
         background: { color: { value: "transparent" } },
         particles: {
           number: { value: 60, density: { enable: true, area: 800 } }, // fewer, bigger particles
-          color: { value: "#ff04d1ff" },
+          color: { value: "#868686ff" },
           shape: {
             type: ["circle", "triangle", "square", "pentagon", "hexagon"], // multiple shapes
           },
