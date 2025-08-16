@@ -8,32 +8,51 @@ const ParticlesBackground = () => {
   }, []);
 
   return (
-     <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        fullScreen: { enable: true, zIndex: -1 },
-        background: { color: { value: "transparent" } },
-        particles: {
-          number: { value: 60, density: { enable: true, area: 800 } }, // fewer, bigger particles
-          color: { value: "#868686ff" },
-          shape: {
-            type: ["circle", "triangle", "square", "pentagon", "hexagon"], // multiple shapes
-          },
-          opacity: { value: 0.7 },
-          size: { value: { min: 4, max: 6 } }, // bigger shapes
-          move: { enable: true, speed: 2, direction: "none", outModes: "out" },
-          links: {
-            enable: true,
-            color: "#696969ff",
-            distance: 200, // longer lines
-            opacity: 0.7,  // more visible
-            width: 1,      // thicker lines
-          },
+   <Particles
+  id="tsparticles"
+  init={particlesInit}
+  options={{
+    fullScreen: { enable: true, zIndex: -1 },
+    background: { color: { value: "transparent" } },
+    particles: {
+      number: { value: 25, density: { enable: true, area: 800 } },
+      color: {
+         value: ["#c118f9ff", "#06b6d4", "#ea0079ff", "#fbbf24"], // purple, teal, pink, yellow
+      },
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.5,
+        animation: {
+          enable: true,
+          speed: 0.8,
+          minimumValue: 0.2,
+          sync: false,
         },
-        detectRetina: true,
-      }}
-    />
+      },
+      size: {
+        value: { min: 20, max: 60 }, // large, soft bubbles
+        animation: {
+          enable: true,
+          speed: 4,
+          minimumValue: 10,
+          sync: false,
+        },
+      },
+      move: {
+        enable: true,
+        speed: 1.2,
+        direction: "none",
+        outModes: "out",
+        random: true,
+        straight: false,
+      },
+      links: {
+        enable: false,
+      },
+    },
+    detectRetina: true,
+  }}
+/>
   );
 };
 
