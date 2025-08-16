@@ -184,7 +184,7 @@ export default function Header({darkMode, toggleDarkMode}) {
         className={`inline-block px-6 py-2 text-sm font-medium rounded-lg shadow-lg shadow-gray-900/50 focus:outline-none focus:ring-2 ${
           darkMode
             ? "text-black bg-white hover:bg-gray-200 focus:ring-gray-400"
-            : "text-white bg-black hover:bg-gray-900 focus:ring-pink-500"
+            : "text-white bg-black hover:bg-gray-900 focus:ring-gray-700"
         }`}
       >
       Resume
