@@ -169,7 +169,7 @@ export default function Header({darkMode, toggleDarkMode}) {
 
   {/* Subheading */}
   <h3 className="text-xl font-light" id='heading1'>
-    A Passionate Full Stack Developer
+    Web Developer
   </h3>
 
 </div>
